@@ -14,9 +14,20 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 
 ---
 
-## About
+## Repository Structure
 
-This internship is structured around weekly tasks that build real-world web development skills. Each project is self-contained with its own README, source code, and documentation.
+```
+elevate-labs-internship/
+│
+├── Task-1/
+│   ├── index.html        # Page structure and content
+│   ├── style.css         # All styling, layout and media queries
+│   └── README.md         # Task details and documentation
+│
+└── README.md             # This file
+```
+
+---
 
 **Intern:** Vratika Kumawat
 
