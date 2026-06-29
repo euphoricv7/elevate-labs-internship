@@ -1,0 +1,483 @@
+/* ===========================================================
+   Platform 9¾ — Tokens
+=========================================================== */
+:root {
+  --bg: #15100B;
+  --bg-panel: #1E160E;
+  --parchment: #F0E6D2;
+  --parchment-muted: #B8A888;
+  --gold: #C9A227;
+  --maroon: #6B1E23;
+  --line: rgba(240, 230, 210, 0.14);
+
+  --gryffindor: #740001;
+  --gryffindor-2: #D3A625;
+  --slytherin: #1A472A;
+  --slytherin-2: #AAAAAA;
+  --ravenclaw: #0E1A40;
+  --ravenclaw-2: #946B2D;
+  --hufflepuff: #F0C75E;
+  --hufflepuff-2: #372E29;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "EB Garamond", serif;
+  --font-hand: "Caveat", cursive;
+
+  --container: 1140px;
+  --radius: 10px;
+}
+
+/* ===========================================================
+   Base
+=========================================================== */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--parchment);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  line-height: 1.1;
+}
+
+p { margin: 0 0 1em; }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.section-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===========================================================
+   Header
+=========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(21, 16, 11, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-mark {
+  width: 26px;
+  height: 26px;
+  color: var(--gold);
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 1rem;
+}
+
+.primary-nav a:hover { color: var(--gold); }
+
+.nav-cta {
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--bg) !important;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--parchment);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-active span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===========================================================
+   Hero
+=========================================================== */
+.hero {
+  padding: 72px 24px 96px;
+}
+
+.hero-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  margin-bottom: 22px;
+}
+
+.hero-sub {
+  color: var(--parchment-muted);
+  font-size: 1.15rem;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--maroon);
+  color: var(--parchment);
+  box-shadow: 0 0 0 1px var(--gold) inset;
+}
+
+.btn-primary:hover { transform: translateY(-2px); background: #832327; }
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--parchment);
+}
+
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-art {
+  display: flex;
+  justify-content: center;
+}
+
+.envelope {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.envelope-body {
+  fill: var(--bg-panel);
+  stroke: var(--parchment-muted);
+  stroke-width: 1.4;
+}
+
+.envelope-flap {
+  fill: none;
+  stroke: var(--parchment-muted);
+  stroke-width: 1.4;
+}
+
+.envelope-fold {
+  stroke: rgba(184, 168, 136, 0.3);
+  stroke-width: 1;
+}
+
+.seal circle {
+  fill: var(--maroon);
+  stroke: var(--gold);
+  stroke-width: 2;
+}
+
+.seal-letter {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  fill: var(--gold);
+}
+
+.quill-shaft {
+  fill: none;
+  stroke: var(--parchment-muted);
+  stroke-width: 2;
+}
+
+.quill-feather {
+  fill: var(--gold);
+  opacity: 0.85;
+}
+
+/* ===========================================================
+   Houses
+=========================================================== */
+.houses {
+  background: var(--bg-panel);
+  padding: 88px 24px;
+}
+
+.houses h2 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  margin-bottom: 40px;
+}
+
+.house-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.house-card {
+  border-radius: var(--radius);
+  padding: 26px;
+  border-top: 4px solid transparent;
+  background: rgba(240, 230, 210, 0.03);
+  border: 1px solid var(--line);
+}
+
+.house-gryffindor { border-top-color: var(--gryffindor); }
+.house-slytherin  { border-top-color: var(--slytherin); }
+.house-ravenclaw  { border-top-color: var(--ravenclaw-2); }
+.house-hufflepuff { border-top-color: var(--hufflepuff); }
+
+.house-index {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  color: var(--parchment-muted);
+  margin-bottom: 10px;
+}
+
+.house-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.house-card p {
+  color: var(--parchment-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ===========================================================
+   Departures
+=========================================================== */
+.departures {
+  padding: 88px 24px;
+}
+
+.departures-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.departures-copy h2 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+}
+
+.departures-copy p {
+  color: var(--parchment-muted);
+  max-width: 360px;
+}
+
+.departures-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.departures-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 22px;
+  background: var(--bg-panel);
+}
+
+.d-time {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.05rem;
+  flex: 0 0 56px;
+}
+
+.d-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.d-note {
+  color: var(--parchment-muted);
+  font-size: 0.9rem;
+  font-family: var(--font-hand);
+}
+
+/* ===========================================================
+   Footer
+=========================================================== */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 48px 24px;
+}
+
+.footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand .logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.footer-brand p {
+  color: var(--parchment-muted);
+  font-size: 0.95rem;
+  margin: 4px 0 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-copy {
+  width: 100%;
+  color: var(--parchment-muted);
+  font-size: 0.78rem;
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+/* ===========================================================
+   Responsive — collapse nav, stack layouts
+=========================================================== */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-art { order: -1; max-width: 300px; margin: 0 auto; }
+  .departures-inner { grid-template-columns: 1fr; }
+  .house-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .nav-toggle { display: flex; }
+
+  .primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--line);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .primary-nav.is-open { max-height: 260px; }
+
+  .primary-nav a {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-cta {
+    border: none;
+    border-radius: 0;
+    color: var(--gold) !important;
+  }
+
+  .house-grid { grid-template-columns: 1fr; }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 48px 20px 64px; }
+  .hero-copy h1 { font-size: 2.2rem; }
+  .departures-list li { flex-wrap: wrap; }
+}

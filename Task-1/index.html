@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform 9¾ — Your letter has arrived</title>
+  <meta name="description" content="A fan-made, non-commercial wizarding-school landing page built for a web development practice task.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Platform 9¾ home">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 24 L6 9 L16 4 L26 9 L26 24 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M6 9 L16 16 L26 9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Platform 9¾</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <a href="#houses">The Houses</a>
+        <a href="#departures">The Express</a>
+        <a href="#footer" class="nav-cta">Open your letter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">King's Cross Station · Platform 9¾</p>
+          <h1>Your letter<br>has arrived.</h1>
+          <p class="hero-sub">Delivered by owl sometime before dawn, sealed in wax, and addressed in handwriting that knows exactly where you sleep. It's time to find out which house you belong to.</p>
+          <div class="hero-actions">
+            <a href="#departures" class="btn btn-primary">Open your letter</a>
+            <a href="#houses" class="btn btn-ghost">Choose a house</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg class="envelope" viewBox="0 0 360 360">
+            <rect x="40" y="80" width="280" height="190" rx="4" class="envelope-body"/>
+            <path d="M40 80 L180 200 L320 80" class="envelope-flap"/>
+            <line x1="40" y1="270" x2="160" y2="170" class="envelope-fold"/>
+            <line x1="320" y1="270" x2="200" y2="170" class="envelope-fold"/>
+            <g class="seal">
+              <circle cx="180" cy="175" r="34"/>
+              <text x="180" y="186" text-anchor="middle" class="seal-letter">H</text>
+            </g>
+            <g class="quill">
+              <path d="M250 300 C 230 250, 245 200, 290 170" class="quill-shaft"/>
+              <path d="M290 170 C 300 180, 300 195, 285 200 C 280 185, 282 175, 290 170 Z" class="quill-feather"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="houses" id="houses">
+      <div class="section-inner">
+        <h2>Four houses, one castle</h2>
+        <div class="house-grid">
+          <article class="house-card house-gryffindor">
+            <span class="house-index">Est. by Godric</span>
+            <h3>Gryffindor</h3>
+            <p>Values nerve and nerve alone — the house that walks toward trouble instead of away from it.</p>
+          </article>
+          <article class="house-card house-slytherin">
+            <span class="house-index">Est. by Salazar</span>
+            <h3>Slytherin</h3>
+            <p>Ambition sharpened into strategy. They don't take risks — they calculate them.</p>
+          </article>
+          <article class="house-card house-ravenclaw">
+            <span class="house-index">Est. by Rowena</span>
+            <h3>Ravenclaw</h3>
+            <p>Curiosity that never quite switches off. If there's a harder question, they're already asking it.</p>
+          </article>
+          <article class="house-card house-hufflepuff">
+            <span class="house-index">Est. by Helga</span>
+            <h3>Hufflepuff</h3>
+            <p>Loyalty that doesn't ask for credit. The house most likely to remember your birthday.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="departures" id="departures">
+      <div class="section-inner departures-inner">
+        <div class="departures-copy">
+          <h2>Departures board</h2>
+          <p>Platform 9¾ keeps its own schedule. Run straight at the barrier between platforms nine and ten — don't slow down.</p>
+        </div>
+        <ul class="departures-list">
+          <li>
+            <span class="d-time">11:00</span>
+            <span class="d-name">Hogwarts Express</span>
+            <span class="d-note">First years, mind the trolley</span>
+          </li>
+          <li>
+            <span class="d-time">19:00</span>
+            <span class="d-name">Knight Bus</span>
+            <span class="d-note">Stick out your wand arm</span>
+          </li>
+          <li>
+            <span class="d-time">23:45</span>
+            <span class="d-name">Portkey to the Burrow</span>
+            <span class="d-note">Touch the boot, don't let go</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Platform 9¾</span>
+        <p>Send us an owl. We're always awake.</p>
+      </div>
+      <nav class="footer-links" aria-label="Owl post links">
+        <a href="#">Owl Post</a>
+        <a href="#">Floo Network</a>
+        <a href="#">Diagon Alley Directory</a>
+      </nav>
+      <p class="footer-copy">Fan-made and non-commercial — built as a practice project, not affiliated with the books or films.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-active', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    primaryNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        primaryNav.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
