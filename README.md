@@ -19,5 +19,7 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 This internship is structured around weekly tasks that build real-world web development skills. Each project is self-contained with its own README, source code, and documentation.
 
 **Intern:** Vratika Kumawat
+
 **Program:** Elevate Labs Web Development Internship
+
 **Year:** 2026
