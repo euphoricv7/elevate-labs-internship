@@ -11,6 +11,7 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 | # | Project | Concepts Covered | Status |
 |---|---------|-----------------|--------|
 | 01 | [Platform 9¾ — Responsive Landing Page](./Task-1/) | HTML5, CSS3, Flexbox, Grid, Media Queries, Responsive Design, SVG | ✅ Done |
+| 02 | [The Marauder's List — To-Do App](./Task-2/) | DOM Manipulation, Event Listeners, Event Delegation, JavaScript ES6, Dynamic UI, Arrays | ✅ Done |
 
 ---
 
@@ -20,17 +21,21 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 elevate-labs-internship/
 │
 ├── Task-1/
-│   ├── index.html        # Page structure and content
-│   ├── style.css         # All styling, layout and media queries
-│   └── README.md         # Task details and documentation
+│   ├── index.html
+│   ├── style.css
+│   └── README.md
 │
-└── README.md             # This file
+├── Task-2/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+│
+└── README.md
 ```
 
 ---
 
 **Intern:** Vratika Kumawat
-
 **Program:** Elevate Labs Web Development Internship
-
 **Year:** 2026
