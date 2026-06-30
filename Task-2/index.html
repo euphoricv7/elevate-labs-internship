@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Marauder's List — Mischief Managed</title>
+  <meta name="description" content="A fan-made, non-commercial wizarding-themed to-do list built for a web development practice task.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="scroll">
+    <header class="scroll__header">
+      <div class="scroll__crest" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <path d="M6 24 L6 9 L16 4 L26 9 L26 24 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M6 9 L16 16 L26 9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
+        </svg>
+      </div>
+      <h1 class="scroll__title">The Marauder's List</h1>
+      <p class="scroll__sub" id="count">0 things afoot</p>
+    </header>
+
+    <form class="quill-line" id="composer">
+      <input
+        type="text"
+        id="taskInput"
+        class="quill-line__input"
+        placeholder="Write a new line of mischief…"
+        autocomplete="off"
+      />
+      <button type="submit" class="quill-line__seal" aria-label="Add to the list">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" />
+          <text x="16" y="21" text-anchor="middle">M</text>
+        </svg>
+      </button>
+    </form>
+
+    <ul class="parchment-list" id="list"></ul>
+
+    <p class="empty" id="empty">The parchment is blank. Solemnly swear you're up to something.</p>
+
+    <footer class="scroll__footer">
+      <div class="filters" id="filters">
+        <button class="filter is-active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">In progress</button>
+        <button class="filter" data-filter="completed">Managed</button>
+      </div>
+      <button class="clear" id="clearCompleted">Mischief managed — clear</button>
+    </footer>
+  </main>
+
+  <p class="disclaimer">Fan-made and non-commercial — built as a practice project, not affiliated with the books or films.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
