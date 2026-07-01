@@ -2,7 +2,7 @@
 
 Task 2 submission for the Web Development Internship: a dynamic to-do list built with vanilla HTML, CSS, and JavaScript.
 
-This is a fan-made, **non-commercial** practice project themed to match the "Platform 9¾" landing page from Task 1, reusing the same parchment/gold/maroon palette and typefaces. All copy is original; no text is copied from any book or film, and the wax-seal icon is hand-drawn in SVG.
+This **non-commercial** practice project is themed to match the "Platform 9¾" landing page from Task 1, reusing the same parchment/gold/maroon palette and typefaces. All copy is original; no text is copied from any book or film, and the wax-seal icon is hand-drawn in SVG.
 
 ## Features
 
