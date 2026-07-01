@@ -7,12 +7,12 @@ This is a fan-made, **non-commercial** practice project themed to match the "Pla
 ## Features
 
 - Add a task by typing and pressing the wax-seal button (or Enter)
-- Mark a task "managed" by clicking its circular check — toggles an `.is-managed` class with a strike-through
+- Mark a task complete by clicking its circular check — toggles an `.is-managed` class with a strikethrough
 - Remove a task with the × button (appears on hover)
-- Filter by All / In progress / Managed
-- "Mischief managed — clear" button removes all completed tasks at once
-- Live counter ("3 things afoot" → "Mischief managed" when the list is clear)
-- Empty-state message when there's nothing on the list
+- Filter by All / Active / Completed
+- "Clear completed" button removes all completed tasks at once
+- Live task counter
+- Empty-state message when there are no tasks
 - All updates happen instantly in the DOM, no page reload
 
 ## How it works

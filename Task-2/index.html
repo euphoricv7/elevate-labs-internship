@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Marauder's List — Mischief Managed</title>
+  <title>The Marauder's List</title>
   <meta name="description" content="A fan-made, non-commercial wizarding-themed to-do list built for a web development practice task.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
         </svg>
       </div>
       <h1 class="scroll__title">The Marauder's List</h1>
-      <p class="scroll__sub" id="count">0 things afoot</p>
+      <p class="scroll__sub" id="count">0 tasks</p>
     </header>
 
     <form class="quill-line" id="composer">
@@ -30,7 +30,7 @@
         type="text"
         id="taskInput"
         class="quill-line__input"
-        placeholder="Write a new line of mischief…"
+        placeholder="What needs doing?"
         autocomplete="off"
       />
       <button type="submit" class="quill-line__seal" aria-label="Add to the list">
@@ -43,15 +43,15 @@
 
     <ul class="parchment-list" id="list"></ul>
 
-    <p class="empty" id="empty">The parchment is blank. Solemnly swear you're up to something.</p>
+    <p class="empty" id="empty">Nothing here yet — add your first task above.</p>
 
     <footer class="scroll__footer">
       <div class="filters" id="filters">
         <button class="filter is-active" data-filter="all">All</button>
-        <button class="filter" data-filter="active">In progress</button>
-        <button class="filter" data-filter="completed">Managed</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
       </div>
-      <button class="clear" id="clearCompleted">Mischief managed — clear</button>
+      <button class="clear" id="clearCompleted">Clear completed</button>
     </footer>
   </main>
 

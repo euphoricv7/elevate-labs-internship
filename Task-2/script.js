@@ -49,10 +49,7 @@ function render() {
   });
 
   const activeCount = entries.filter((e) => !e.managed).length;
-  countLabel.textContent =
-    activeCount === 0 && entries.length > 0
-      ? "Mischief managed"
-      : `${activeCount} thing${activeCount === 1 ? "" : "s"} afoot`;
+  countLabel.textContent = `${activeCount} task${activeCount === 1 ? "" : "s"}`;
 
   scroll.classList.toggle("is-empty", entries.length === 0);
 }
