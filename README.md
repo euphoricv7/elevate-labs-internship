@@ -2,7 +2,7 @@
 
 A collection of projects built during the Elevate Labs Web Development Internship program. Each task focuses on a core web development concept, built from scratch using HTML, CSS, and JavaScript.
 
-> Tools used: VS Code, Live Server, Git, GitHub, and AI tools (ChatGPT, Claude) for learning and efficiency.
+> Tools used: VS Code, Live Server, Git, GitHub, and AI tools for learning and efficiency.
 
 ---
 
@@ -49,6 +49,8 @@ elevate-labs-internship/
 
 ---
 
-**Intern:** Pratika Kumawat
+**Intern:** Vratika Kumawat
+
 **Program:** Elevate Labs Web Development Internship
+
 **Year:** 2026
