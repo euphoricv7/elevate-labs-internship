@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hogwarts School of Witchcraft & Wizardry</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">H · W ·</a>
+    <ul class="nav-links">
+      <li><a href="#houses">Houses</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#stats">The Castle</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#houses" class="menu-link">Houses</a>
+    <a href="#courses" class="menu-link">Courses</a>
+    <a href="#stats" class="menu-link">The Castle</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-crest">&#9889;</div>
+    <p class="hero-subtitle">Founded 990 A.D. &middot; Scotland</p>
+    <h1>Hogwarts School<br>of Witchcraft<br>&amp; Wizardry</h1>
+    <p class="hero-tagline">Where the extraordinary become legend, and magic is not merely taught &mdash; it is discovered.</p>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a href="#houses" class="btn btn-primary">Find Your House</a>
+      <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+    </div>
+  </div>
+</section>
+
+<section class="houses" id="houses">
+  <div class="section-inner">
+    <p class="section-label">The Four Houses</p>
+    <h2 class="section-title">Where do you belong?</h2>
+    <div class="houses-grid">
+      <div class="house-card">
+        <div class="house-icon">&#129409;</div>
+        <p class="house-name">Gryffindor</p>
+        <p class="house-trait">Bravery, nerve &amp; chivalry</p>
+        <div class="house-colors">
+          <div class="swatch" style="background:#740001;"></div>
+          <div class="swatch" style="background:#d3a625;"></div>
+        </div>
+      </div>
+      <div class="house-card">
+        <div class="house-icon">&#128013;</div>
+        <p class="house-name">Slytherin</p>
+        <p class="house-trait">Ambition, cunning &amp; pride</p>
+        <div class="house-colors">
+          <div class="swatch" style="background:#1a472a;"></div>
+          <div class="swatch" style="background:#aaaaaa;"></div>
+        </div>
+      </div>
+      <div class="house-card">
+        <div class="house-icon">&#129413;</div>
+        <p class="house-name">Ravenclaw</p>
+        <p class="house-trait">Wisdom, wit &amp; learning</p>
+        <div class="house-colors">
+          <div class="swatch" style="background:#0e1a40;"></div>
+          <div class="swatch" style="background:#946b2d;"></div>
+        </div>
+      </div>
+      <div class="house-card">
+        <div class="house-icon">&#129419;</div>
+        <p class="house-name">Hufflepuff</p>
+        <p class="house-trait">Loyalty, patience &amp; justice</p>
+        <div class="house-colors">
+          <div class="swatch" style="background:#ecb939;"></div>
+          <div class="swatch" style="background:#372e29;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="section-inner">
+    <p class="section-label">Curriculum</p>
+    <h2 class="section-title">This Year's Subjects</h2>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">&#128302;</div>
+        <p class="course-name">Divination</p>
+        <p class="course-desc">The art of predicting the future through crystal balls, tea leaves, and the movements of celestial bodies.</p>
+        <p class="course-year">Third Year Onward</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">&#129514;</div>
+        <p class="course-name">Potions</p>
+        <p class="course-desc">The subtle science and exact art of potion-making. Liquid enchantment that bewilders the senses.</p>
+        <p class="course-year">First Year Onward</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">&#127807;</div>
+        <p class="course-name">Herbology</p>
+        <p class="course-desc">The study of magical plants, their properties and uses in potions, and the dangers they present.</p>
+        <p class="course-year">First Year Onward</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">&#9876;</div>
+        <p class="course-name">Defence Against the Dark Arts</p>
+        <p class="course-desc">Practical and theoretical instruction in defending against Dark creatures and the curses of Dark wizards.</p>
+        <p class="course-year">First Year Onward</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">&#10024;</div>
+        <p class="course-name">Charms</p>
+        <p class="course-desc">Spells that add properties to an object or creature, from the simplest Lumos to the Fidelius Charm.</p>
+        <p class="course-year">First Year Onward</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">&#127769;</div>
+        <p class="course-name">Astronomy</p>
+        <p class="course-desc">Observations of the night sky from the Astronomy Tower, studying the influence of stars on magic.</p>
+        <p class="course-year">First Year Onward</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="quote-inner">
+    <span class="quote-mark">&ldquo;</span>
+    <p class="quote-text">It is our choices, Harry, that show what we truly are, far more than our abilities.</p>
+    <p class="quote-attr">&mdash; Albus Dumbledore, Headmaster</p>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="section-inner">
+    <p class="section-label">By the Numbers</p>
+    <h2 class="section-title">A thousand years of magic</h2>
+    <div class="stats-grid">
+      <div class="stat-block"><span class="stat-number">142</span><span class="stat-label">Moving staircases</span></div>
+      <div class="stat-block"><span class="stat-number">8</span><span class="stat-label">Floors of mystery</span></div>
+      <div class="stat-block"><span class="stat-number">~1000</span><span class="stat-label">Years of history</span></div>
+      <div class="stat-block"><span class="stat-number">4</span><span class="stat-label">Founders&rsquo; legacies</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="logo-f">Hogwarts School of Witchcraft &amp; Wizardry</p>
+  <p>Est. 990 A.D. &middot; The Scottish Highlands &middot; Owl Post Only</p>
+  <div class="footer-links">
+    <a href="#">The Sorting Hat</a>
+    <a href="#">Quidditch Trials</a>
+    <a href="#">Diagon Alley</a>
+    <a href="#">Owlery</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
