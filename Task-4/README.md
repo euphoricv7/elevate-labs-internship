@@ -2,7 +2,7 @@
 
 Task 4 submission for the Web Development Internship: a desktop-only Hogwarts-themed page converted to a fully mobile-friendly layout using CSS media queries.
 
-This is a fan-made, **non-commercial** practice project themed to match the Platform 9¾ and Marauder's List projects from Tasks 1 and 2. All copy is original; no text is copied from any book or film.
+This is a **non-commercial** practice project themed to match the Platform 9¾ and Marauder's List projects from Tasks 1 and 2. All copy is original; no text is copied from any book or film.
 
 ## What the page includes
 
@@ -16,7 +16,7 @@ This is a fan-made, **non-commercial** practice project themed to match the Plat
 
 ## How responsiveness was handled
 
-All mobile overrides are inside two media query blocks — nothing in the desktop base was deleted, the queries simply layer on top.
+All mobile overrides are inside two media query blocks — nothing in the desktop base was deleted; the queries simply layer on top.
 
 - `@media (max-width: 768px)` — main mobile breakpoint:
   - Horizontal nav hidden, hamburger button revealed (JS toggles `.open` class)
