@@ -2,7 +2,8 @@
 
 A collection of projects built during the Elevate Labs Web Development Internship program. Each task focuses on a core web development concept, built from scratch using HTML, CSS, and JavaScript.
 
-> Tools used: VS Code, Live Server, Git, GitHub.
+> Tools used: VS Code, Live Server, Git, GitHub, and AI tools (ChatGPT, Claude) for learning and efficiency.
+
 ---
 
 ## Tasks
@@ -12,6 +13,7 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 | 01 | [Platform 9¾ — Responsive Landing Page](./Task-1/) | HTML5, CSS3, Flexbox, Grid, Media Queries, Responsive Design, SVG | ✅ Done |
 | 02 | [The Marauder's List — To-Do App](./Task-2/) | DOM Manipulation, Event Listeners, Event Delegation, JavaScript ES6, Dynamic UI, Arrays | ✅ Done |
 | 03 | [Book API — REST API](./Task-3/) | Node.js, Express.js, REST API, HTTP Methods, JSON, Middleware, CRUD | ✅ Done |
+| 04 | [Hogwarts — Responsive Page](./Task-4/) | Media Queries, Responsive Design, CSS Grid, clamp(), Hamburger Nav, Viewport | ✅ Done |
 
 ---
 
@@ -36,13 +38,17 @@ elevate-labs-internship/
 │   ├── package.json
 │   └── README.md
 │
+├── Task-4/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+│
 └── README.md
 ```
 
 ---
 
-**Intern:** Vratika Kumawat
-
+**Intern:** Pratika Kumawat
 **Program:** Elevate Labs Web Development Internship
-
 **Year:** 2026
