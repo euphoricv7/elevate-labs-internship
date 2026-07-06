@@ -106,6 +106,7 @@ REST API design, Express routing, HTTP methods and status codes (200, 201, 400, 
 book-api/
 ├── server.js       # Express server with all routes
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
