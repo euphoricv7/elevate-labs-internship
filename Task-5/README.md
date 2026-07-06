@@ -4,7 +4,7 @@ This folder contains the deliverables for **Task 5** of the Elevate Labs Web Dev
 
 ---
 
-## 🔮 Project Overview
+##  Project Overview
 
 A clean, responsive, and basic dark-theme developer portfolio built to display all internship deliverable links. It features:
 - **Dark Theme Style**: Standard slate dark theme layout.
