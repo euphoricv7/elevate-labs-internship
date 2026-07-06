@@ -1,0 +1,414 @@
+/* ============================================================
+   BASE / RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #f0d080;
+  --gold-dark: #7a5e1a;
+  --parchment: #f5ead0;
+  --ink: #0d0a04;
+  --crimson: #8b0000;
+  --mist: #c8c8d8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--ink);
+  color: var(--parchment);
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+/* ============================================================
+   NAV — desktop: horizontal link list
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10,7,2,0.95);
+  border-bottom: 1px solid var(--gold-dark);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: 18px;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* Step 5: on desktop the nav is a plain horizontal list */
+.hamburger { display: none; }
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--mist);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* Mobile menu — hidden until toggled by JS */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(10,7,2,0.98);
+  border-top: 1px solid var(--gold-dark);
+  padding: 8px 24px 20px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--mist);
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+  text-transform: uppercase;
+}
+.mobile-menu a:hover { color: var(--gold); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 60px;
+  background: radial-gradient(ellipse at 50% 60%, rgba(139,0,0,0.18) 0%, transparent 70%);
+}
+.hero-crest {
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* Step 4: clamp() lets the heading scale fluidly —
+   no fixed px that would overflow a phone screen */
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(30px, 6vw, 72px);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero-tagline {
+  font-style: italic;
+  font-size: clamp(16px, 2.5vw, 22px);
+  color: var(--mist);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+.hero-divider {
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 36px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-primary { background: var(--gold); color: var(--ink); }
+.btn-primary:hover { background: var(--gold-light); }
+.btn-secondary { background: transparent; color: var(--gold); }
+.btn-secondary:hover { background: rgba(201,168,76,0.1); }
+
+/* ============================================================
+   SHARED SECTION
+   ============================================================ */
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 4vw, 42px);
+  color: var(--gold-light);
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   HOUSES — 4-column desktop grid
+   Step 2 issue: a fixed-width multi-col layout that overflows
+   phones; fixed by the media query below
+   ============================================================ */
+.houses {
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.house-card {
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 32px 20px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.house-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+.house-icon { font-size: 48px; margin-bottom: 16px; }
+.house-name {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+.house-trait {
+  font-size: 13px;
+  color: var(--mist);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.house-colors { display: flex; gap: 6px; justify-content: center; }
+.swatch {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ============================================================
+   COURSES — 3-column desktop grid
+   ============================================================ */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.course-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 28px 24px;
+  transition: border-color 0.3s;
+}
+.course-card:hover { border-color: var(--gold); }
+.course-icon { font-size: 32px; margin-bottom: 14px; }
+.course-name {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+.course-desc { font-size: 14px; line-height: 1.7; color: #a8a090; font-style: italic; }
+.course-year {
+  margin-top: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.quote-section {
+  background: rgba(139,0,0,0.08);
+  border-top: 1px solid rgba(139,0,0,0.3);
+  border-bottom: 1px solid rgba(139,0,0,0.3);
+}
+.quote-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+.quote-mark {
+  font-family: 'Cinzel', serif;
+  font-size: 80px;
+  color: var(--gold-dark);
+  line-height: 0.6;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote-text {
+  font-size: clamp(18px, 3vw, 28px);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--parchment);
+  margin-bottom: 20px;
+}
+.quote-attr {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   STATS — 4-column desktop grid
+   ============================================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(201,168,76,0.2);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+.stat-block {
+  background: var(--ink);
+  padding: 40px 20px;
+  text-align: center;
+}
+.stat-number {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+.stat-label { font-size: 13px; color: var(--mist); font-style: italic; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  border-top: 1px solid rgba(201,168,76,0.25);
+  background: rgba(5,3,1,0.95);
+  padding: 40px 24px;
+  text-align: center;
+}
+.logo-f {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+footer p { font-size: 13px; color: #7a7060; font-style: italic; }
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.footer-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer-links a:hover { color: var(--gold); }
+
+/* ============================================================
+   TASK 4 — MEDIA QUERY
+   All mobile overrides go here. Nothing above was deleted;
+   these rules layer on top at max-width: 768px.
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Step 2 + 7: prevent any element from forcing a scrollbar */
+  html, body { overflow-x: hidden; }
+
+  /* Step 5: hide horizontal nav, reveal hamburger */
+  .nav-links { display: none; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--gold);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Step 4: reduce hero padding and let headings use clamp() */
+  .hero { padding: 80px 20px 50px; min-height: auto; }
+  .hero-crest { font-size: 56px; }
+
+  /* Stack hero buttons vertically */
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 280px; text-align: center; }
+
+  /* Step 4: houses → 2-column grid */
+  .houses-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Step 4: courses → single column */
+  .courses-grid { grid-template-columns: 1fr; }
+
+  /* Step 4: stats → 2x2 grid */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Reduce section padding on mobile */
+  .section-inner { padding: 60px 20px; }
+
+  /* Footer links stack */
+  .footer-links { flex-direction: column; align-items: center; gap: 14px; }
+}
+
+/* Extra small phones: houses go single column */
+@media (max-width: 420px) {
+  .houses-grid { grid-template-columns: 1fr; }
+}

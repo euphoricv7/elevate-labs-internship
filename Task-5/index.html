@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vratika Kumawat - Web Development Portfolio. Projects completed during my internship.">
+    <title>Vratika Kumawat | Web Developer Portfolio</title>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for simple nav and project icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#home" class="logo">Vratika Kumawat</a>
+            
+            <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <span class="intern-badge">Internship Portfolio</span>
+                <h1>Hi, I'm Vratika Kumawat</h1>
+                <h2>Web Development Intern at Elevate Labs</h2>
+                <p>I build clean, simple, and responsive websites using HTML, CSS, and JavaScript. Explore my internship projects below.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about" id="about">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>My Internship Journey</h3>
+                        <p>I am a beginner developer currently doing a Web Development Internship at Elevate Labs. Throughout this program, I have focused on learning the core technologies of front-end development, scripting with JavaScript, and building clean interfaces.</p>
+                        <ul class="details-list">
+                            <li><strong>Intern Name:</strong> Vratika Kumawat</li>
+                            <li><strong>Program:</strong> Web Development Internship</li>
+                            <li><strong>Year:</strong> 2026</li>
+                            <li><strong>Focus:</strong> HTML, CSS, JavaScript, and Git</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-skills">
+                        <h3>Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Responsive Web Design</li>
+                            <li>Git & Version Control</li>
+                            <li>Basic REST APIs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="section-container">
+                <h2 class="section-title">My Projects</h2>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <span class="project-tag">Task 1</span>
+                        <h3>Platform 9¾</h3>
+                        <p>A responsive landing page themed around Platform 9¾. Built using standard Flexbox, CSS Grid, and Media Queries to adapt to different screen sizes.</p>
+                        <div class="project-links">
+                            <a href="../Task-1/index.html" target="_blank" class="demo-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/euphoricv7/elevate-labs-internship/tree/main/Task-1" target="_blank" class="code-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <span class="project-tag">Task 2</span>
+                        <h3>The Marauder's List</h3>
+                        <p>A dynamic To-Do application. Built using vanilla JavaScript for DOM Manipulation, handling events to add, check off, and delete items.</p>
+                        <div class="project-links">
+                            <a href="../Task-2/index.html" target="_blank" class="demo-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/euphoricv7/elevate-labs-internship/tree/main/Task-2" target="_blank" class="code-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <span class="project-tag">Task 3</span>
+                        <h3>REST API Potion</h3>
+                        <p>A backend web API built with Node.js and Express to manage a library directory. Supports standard HTTP methods: GET, POST, PUT, and DELETE.</p>
+                        <div class="project-links">
+                            <span class="disabled-link">Backend Project</span>
+                            <a href="https://github.com/euphoricv7/elevate-labs-internship/tree/main/Task-3" target="_blank" class="code-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <span class="project-tag">Task 4</span>
+                        <h3>Hogwarts Portal</h3>
+                        <p>A responsive portal page representing Hogwarts. Focuses on fluid layouts, media query break points, and clamp() scaling for text sizes.</p>
+                        <div class="project-links">
+                            <a href="../Task-4/index.html" target="_blank" class="demo-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/euphoricv7/elevate-labs-internship/tree/main/Task-4" target="_blank" class="code-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card active-card">
+                        <span class="project-tag">Task 5</span>
+                        <h3>Developer Portfolio</h3>
+                        <p>The static portfolio website you are currently viewing. It hosts all my deliverables in one central location, deployed via GitHub Pages.</p>
+                        <div class="project-links">
+                            <a href="#" class="demo-link">Active Page</a>
+                            <a href="https://github.com/euphoricv7/elevate-labs-internship/tree/main/Task-5" target="_blank" class="code-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="section-container">
+                <h2 class="section-title">Contact Me</h2>
+                
+                <div class="contact-box">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your Email Address" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    
+                    <div id="success-message" class="success-message hidden">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Thank you! Your message has been sent successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Vratika Kumawat. All rights reserved.</p>
+        <p class="footer-sub">Elevate Labs Web Development Internship Deliverable</p>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
