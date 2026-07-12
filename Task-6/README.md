@@ -4,7 +4,7 @@ This folder contains the deliverables for **Task 6** of the Elevate Labs Web Dev
 
 ---
 
-## 🔮 Project Overview
+##  Project Overview
 
 A clean, responsive, dark-themed contact form built to capture and validate user inputs before mock submission. It features:
 - **Client-Side Validation**: Ensures Name and Message fields are not empty, and the Email input matches a correct email pattern.
