@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task 6 - Contact Form with JavaScript Client-Side Validation.">
+    <title>Contact Form | Input Validation</title>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation (Consistent with Task 5) -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../Task-5/index.html" class="logo">Vratika Kumawat</a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../Task-5/index.html" class="nav-link">Home</a></li>
+                    <li><a href="../Task-5/index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../Task-5/index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../Task-5/index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <section class="form-section">
+            <div class="form-container">
+                <h1 class="form-title">Contact Form</h1>
+                <p class="form-subtitle">Fill out the form below. All fields are validated in real-time using JavaScript.</p>
+                
+                <!-- Form Tag (novalidate disables default browser tooltips) -->
+                <form id="contactForm" novalidate>
+                    
+                    <!-- Name Input Group -->
+                    <div class="form-group" id="name-group">
+                        <label for="name">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user input-icon"></i>
+                            <input type="text" id="name" placeholder="Enter your full name">
+                        </div>
+                        <span class="error-message" id="nameError">Full name is required.</span>
+                    </div>
+
+                    <!-- Email Input Group -->
+                    <div class="form-group" id="email-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope input-icon"></i>
+                            <input type="email" id="email" placeholder="Enter your email address">
+                        </div>
+                        <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                    </div>
+
+                    <!-- Message Input Group -->
+                    <div class="form-group" id="message-group">
+                        <label for="message">Your Message</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-comment input-icon"></i>
+                            <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <span class="error-message" id="messageError">Message cannot be empty.</span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <!-- Success Confirmation Box (Hidden initially) -->
+                <div id="successMessage" class="success-box hidden">
+                    <i class="fa-regular fa-circle-check success-icon"></i>
+                    <h2>Thank You!</h2>
+                    <p>Your message has been validated successfully and sent.</p>
+                    <button class="btn-reset" id="resetFormBtn">Send Another Message</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Vratika Kumawat. All rights reserved.</p>
+        <p class="footer-sub">Task 6: Client-Side Input Validation. Elevate Labs Internship.</p>
+    </footer>
+
+    <!-- Validation Script -->
+    <script src="script.js"></script>
+</body>
+</html>
