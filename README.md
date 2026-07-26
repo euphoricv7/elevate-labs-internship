@@ -16,8 +16,11 @@ A collection of projects built during the Elevate Labs Web Development Internshi
 | 04 | [Hogwarts — Responsive Page](./Task-4/) | Media Queries, Responsive Design, CSS Grid, clamp(), Hamburger Nav, Viewport | ✅ Done |
 | 05 | [Developer Portfolio](./Task-5/) | GitHub Pages, Simple Dark Theme, Form Validation, Responsive Design | ✅ Done |
 | 06 | [Contact Form Validation](./Task-6/) | Form Elements, Input Validation, Event Handling, Regular Expressions (Regex) | ✅ Done |
+| 07 | [GitHub Project Explorer](./github-project-explorer/) | React, Vite, GitHub REST API, Chart.js, LocalStorage | ✅ Done |
 
 ---
+
+
 
 ## Repository Structure
 
@@ -59,6 +62,11 @@ elevate-labs-internship/
 │   ├── INTERVIEW_QUESTIONS.md
 │   └── README.md
 │
+├── github-project-explorer/
+│   ├── src/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
 └── README.md
 ```
 
