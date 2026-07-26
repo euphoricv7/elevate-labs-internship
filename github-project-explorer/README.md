@@ -4,7 +4,7 @@ An interactive, high-performance web dashboard built with **React**, **Vite**, *
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **🔍 Global Search Engine**: Search any GitHub username/organization (e.g., `facebook`, `torvalds`, `vercel`) or search open-source repositories by topic/keyword (e.g., `react`, `machine-learning`, `rust`).
 - **📊 Language Analytics & Visualizations**:
