@@ -117,8 +117,3 @@ github-project-explorer/
 3. **Compare**: Click the **Compare** button in the header and compare `facebook` vs `vercel`.
 4. **Bookmarks & Notes**: Click the star icon on a repository, add a note like *"Inspect auth module"*, and switch to the **Bookmarks** tab to see your note persisted!
 
----
-
-## 📜 License
-
-This project is open-source under the MIT License.
