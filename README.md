@@ -63,9 +63,13 @@ elevate-labs-internship/
 │   └── README.md
 │
 ├── github-project-explorer/
+│   ├── dist/
 │   ├── src/
+│   ├── index.html
 │   ├── package.json
+│   ├── package-lock.json
 │   ├── vite.config.js
+│   ├── .gitignore
 │   └── README.md
 └── README.md
 ```
