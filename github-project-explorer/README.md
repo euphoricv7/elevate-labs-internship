@@ -1,4 +1,4 @@
-# 🚀 GitHub Project Explorer & Analytics Dashboard
+#  GitHub Project Explorer & Analytics Dashboard
 
 An interactive, high-performance web dashboard built with **React**, **Vite**, **Chart.js**, and the **GitHub REST API**. Explore repositories, analyze language distributions, compare developer profiles side-by-side, discover trending projects, and persist bookmarked repositories with custom personal notes.
 
@@ -26,7 +26,7 @@ An interactive, high-performance web dashboard built with **React**, **Vite**, *
 
 ---
 
-## 🛠️ Tech Stack & Libraries
+##  Tech Stack & Libraries
 
 - **Frontend Core**: React 18, Vite
 - **Styling**: Vanilla CSS3 (Custom Glassmorphism Dark Design System, CSS Grid/Flexbox)
@@ -37,41 +37,48 @@ An interactive, high-performance web dashboard built with **React**, **Vite**, *
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 github-project-explorer/
-├── public/
+├── dist/                          # Production build output
+│   ├── assets/
+│   │   ├── index-D8lOlMQC.js
+│   │   ├── index-jZXgGgKn.css
+│   │   └── index.html
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx             # Top navigation & search bar
+│   │   ├── UserProfileCard.jsx    # Profile header with stats
+│   │   ├── FilterBar.jsx          # Language filters & sorting
+│   │   ├── RepoCard.jsx           # Repository item card
+│   │   ├── RepoGrid.jsx           # Responsive repository grid
+│   │   ├── LanguageChart.jsx      # Bar & Doughnut charts
+│   │   ├── ProfileComparisonModal.jsx  # Side-by-side comparator
+│   │   ├── TrendingSection.jsx    # Trending repositories view
+│   │   ├── BookmarksView.jsx      # Saved repositories manager
+│   │   ├── RepoNoteModal.jsx      # Personal note modal
+│   │   └── ApiKeyModal.jsx        # Personal Access Token input
+│   ├── context/
+│   │   └── ExplorerContext.jsx    # Global state provider
+│   ├── utils/
+│   │   ├── githubApi.js           # REST API & caching
+│   │   ├── languageColors.js      # GitHub language colors
+│   │   └── storage.js             # LocalStorage helper
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
 ├── index.html
 ├── vite.config.js
 ├── package.json
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── index.css
-    ├── components/
-    │   ├── Navbar.jsx                  # Top navigation & global search bar
-    │   ├── UserProfileCard.jsx          # Profile header with stats & links
-    │   ├── FilterBar.jsx               # Language filters & sorting dropdowns
-    │   ├── RepoCard.jsx                # Repository item card with actions
-    │   ├── RepoGrid.jsx                # Responsive repository grid
-    │   ├── LanguageChart.jsx           # Chart.js Bar & Doughnut charts
-    │   ├── ProfileComparisonModal.jsx  # Side-by-side profile comparator modal
-    │   ├── TrendingSection.jsx         # Trending projects view (Daily/Weekly/Monthly)
-    │   ├── BookmarksView.jsx           # Saved repositories manager
-    │   ├── RepoNoteModal.jsx           # Personal note drawer modal
-    │   └── ApiKeyModal.jsx             # Personal Access Token input modal
-    ├── utils/
-    │   ├── githubApi.js                # REST API queries & client-side caching
-    │   ├── languageColors.js           # GitHub language color mappings
-    │   └── storage.js                  # LocalStorage bookmark & notes helper
-    └── context/
-        └── ExplorerContext.jsx         # Global state & Context provider
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -102,7 +109,7 @@ github-project-explorer/
 
 ---
 
-## ⚡ Available Scripts
+## Available Scripts
 
 - **`npm run dev`**: Starts the development server on `http://localhost:3001`.
 - **`npm run build`**: Compiles production assets into the `dist/` directory.
@@ -110,7 +117,7 @@ github-project-explorer/
 
 ---
 
-## 💡 Usage Tips for Demonstrations & Interviews
+##  Usage Tips for Demonstrations & Interviews
 
 1. **Search**: Type `torvalds` or `facebook` in the search bar to load real-time GitHub data.
 2. **Analytics**: Scroll down to inspect the Bar and Doughnut charts reflecting language breakdown.
