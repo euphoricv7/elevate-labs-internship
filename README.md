@@ -77,5 +77,7 @@ elevate-labs-internship/
 ---
 
 **Intern:** Vratika Kumawat
+
 **Program:** Elevate Labs Web Development Internship
+
 **Year:** 2026
